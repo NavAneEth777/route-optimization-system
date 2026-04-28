@@ -22,7 +22,7 @@ export default function App() {
   const [error, setError] = useState(null)
   const [activeAlgo, setActiveAlgo] = useState(null) // 'dijkstra' | 'mst' | 'compare'
 
-  const API = 'http://localhost:8080/api'
+  const API = import.meta.env.VITE_API_URL || 'http://localhost:8080/api'
 
   // Load sample graph on mount
   useEffect(() => {
